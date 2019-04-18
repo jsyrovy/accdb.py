@@ -10,6 +10,12 @@ Python class based on [pypyodbc](https://github.com/jiangwen365/pypyodbc) for co
 pip install pypyodbc
 ```
 
+## Instalation
+
+```
+python setup.py install
+```
+
 ## Usage
 
 ```python
