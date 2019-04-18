@@ -7,9 +7,9 @@ class Accdb:
 
         :param path: Access DB absolute file path"""
         pypyodbc.lowercase = False
-        self.__path = path
-        self.__conn = pypyodbc.connect(f"Driver={{Microsoft Access Driver (*.mdb, *.accdb)}};Dbq={path};")
-        self.__cursor = self.__conn.cursor()
+        self._path = path
+        self._conn = pypyodbc.connect(f"Driver={{Microsoft Access Driver (*.mdb, *.accdb)}};Dbq={path};")
+        self._cursor = self._conn.cursor()
 
     def __enter__(self):
         return self
@@ -20,15 +20,15 @@ class Accdb:
 
     @property
     def path(self):
-        return self.__path
+        return self._path
 
     @property
     def connection(self):
-        return self.__conn
+        return self._conn
 
     @property
     def cursor(self):
-        return self.__cursor
+        return self._cursor
 
     @staticmethod
     def convert_date(dt):
