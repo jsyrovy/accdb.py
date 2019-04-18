@@ -60,3 +60,10 @@ class Accdb:
         self.commit()
         self.cursor.close()
         self.connection.close()
+
+    def qry_header(self, qry):
+        self.execute(qry)
+        return [s[0] for s in self.cursor.description]
+
+    def table_header(self, table):
+        return self.qry_header(f"SELECT * FROM {table};")

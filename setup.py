@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(name="accdb",
-                 version="1.0.1",
+                 version="1.1.0",
                  description="Microsoft Access Database Handler",
                  author="Jiri Syrovy",
                  author_email="jiri.syrovy@gmail.com",
